@@ -1,5 +1,5 @@
-const core = require("@actions/core");
-const execa = require("execa");
+import * as core from '@actions/core';
+import { execa } from "execa";
 
 const execCommand = async (file, args) => {
   await execa(file, args).stdout.pipe(process.stdout);
